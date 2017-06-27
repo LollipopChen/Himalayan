@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+    
+    <ImageButton
+        android:id="@+id/message"
+        android:layout_width="@dimen/ac_btn_width"
+        android:layout_height="@dimen/ac_btn_hight"
+        app:srcCompat="@drawable/ic_email"
+        android:background="@android:color/transparent"/>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="@dimen/ac_search_width"
+        android:layout_height="@dimen/ac_btn_hight"
+        android:padding="@dimen/ac_maginLeft"
+        android:background="@drawable/ac_search_bg">
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_search"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/search_ed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/search"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/ac_ed_hint"
+            android:textSize="@dimen/ed_text_size"
+            android:layout_marginLeft="@dimen/ac_maginLeft"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/actionbar_tv"
+        android:layout_width="@dimen/ac_search_width"
+        android:layout_height="@dimen/ac_btn_hight"
+        android:padding="@dimen/ac_maginLeft"
+        android:gravity="center"
+        android:textSize="@dimen/tittle_text_size"
+        android:text="@string/title_read"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/off_line"
+        android:layout_width="@dimen/ac_btn_width"
+        android:layout_height="@dimen/ac_btn_hight"
+        app:srcCompat="@drawable/ic_time"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/download"
+        android:layout_width="@dimen/ac_btn_width"
+        android:layout_height="@dimen/ac_btn_hight"
+        app:srcCompat="@drawable/ic_download"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/scan"
+        android:layout_width="@dimen/ac_btn_width"
+        android:layout_height="@dimen/ac_btn_hight"
+        app:srcCompat="@drawable/ic_scan"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
+
+</LinearLayout>

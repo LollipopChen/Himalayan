@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_h_hight"
+        android:padding="@dimen/mine_h_magin">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/header_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_mydemo"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:id="@+id/login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/header_icon">
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击登录"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mine_h_magin"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_medals"
+                android:layout_toRightOf="@id/login"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/mine_h_magin"/>
+
+            <TextView
+                android:id="@+id/login_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1秒登录，专享个性化服务"
+                android:textSize="@dimen/hint_size"
+                android:layout_below="@id/login"
+                android:layout_marginLeft="@dimen/mine_h_magin"
+                android:layout_marginTop="3dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat = "@drawable/ic_rightjiantou"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tool_bar"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mine_tool_hight"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/mine_h_magin">
+        <ImageButton
+            android:id="@+id/history"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat = "@drawable/ic_history"
+            android:background="@color/translucent_black"/>
+
+        <ImageButton
+            android:id="@+id/subscribe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat = "@drawable/ic_subscribe"
+            android:background="@color/translucent_black"
+            android:layout_marginLeft="@dimen/mine_tool_mainge"/>
+
+        <ImageButton
+            android:id="@+id/mine_download"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat = "@drawable/ic_download"
+            android:background="@color/translucent_black"
+            android:layout_marginLeft="@dimen/mine_tool_mainge"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:layout_margin="@dimen/mine_h_magin"
+        android:text="开始录音"
+        android:textColor="@android:color/white"
+        android:background="@drawable/mine_button_bg"/>
+
+    <Button
+        android:id="@+id/host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start"
+        android:layout_margin="@dimen/mine_h_magin"
+        android:text="主播中心"
+        android:background="@drawable/mine_button_bg_white"/>
+
+</RelativeLayout>

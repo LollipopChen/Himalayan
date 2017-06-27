@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Actionbar的尺寸-->
+    <dimen name="ac_btn_hight">40dp</dimen>
+    <dimen name="ac_btn_width">45dp</dimen>
+    <dimen name="ac_search_width">200dp</dimen>
+    <dimen name="ac_maginLeft">5dp</dimen>
+
+    <!--首页顶部导航栏的尺寸-->
+    <dimen name="home_toolbar_hight">40dp</dimen>
+
+    <!--输入框的文字大小-->
+    <dimen name="ed_text_size">14sp</dimen>
+    <!--标题的文字大小-->
+    <dimen name="tittle_text_size">18sp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="hint_size">12sp</dimen>
+
+    <dimen name="listview_hight">40dp</dimen>
+    <dimen name="listview_magin">58px</dimen>
+
+    <dimen name="mine_h_hight">80dp</dimen>
+    <dimen name="mine_h_magin">10dp</dimen>
+    <dimen name="mine_bottom_magin">20dp</dimen>
+    <dimen name="mine_tool_hight">40dp</dimen>
+    <dimen name="mine_tool_mainge">2dp</dimen>
+    <dimen name="mine_tool_item_padding">10dp</dimen>
+    <dimen name="mine_tool_itrm_bottom">2px</dimen>
+</resources>

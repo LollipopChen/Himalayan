@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="title_home">首页</string>
+    <string name="title_read">订阅</string>
+    <string name="title_found">发现</string>
+    <string name="title_mine">我的</string>
+    <string name="recommonded">推荐</string>
+    <string name="hot_content">热门</string>
+    <string name="classification">分类</string>
+    <string name="lists">榜单</string>
+    <string name="the_host">主播</string>
+    <string name="ac_ed_hint">搜索声音、专辑、人</string>
+    <string name="wel_tittle">欢迎进入MyDemo</string>
+
+    <string name="mine_shopping">我的已购</string>
+    <string name="mine_wallet">我的钱包</string>
+    <string name="mine_conpous">我的优惠券</string>
+
+    <string name="mine_like">我喜欢的</string>
+    <string name="mine_trafficpackage">免流量服务</string>
+
+    <string name="mine_more">更多</string>
+    <string name="mine_feedback">帮助与反馈</string>
+    <string name="mine_setting">设置</string>
+
+
+</resources>
