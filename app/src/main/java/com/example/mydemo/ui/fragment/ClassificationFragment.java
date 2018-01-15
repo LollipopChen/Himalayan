@@ -1,4 +1,4 @@
-package com.example.mydemo.fragment;
+package com.example.mydemo.ui.fragment;
 
 
 import android.os.Bundle;
@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 
 import com.example.mydemo.R;
 
-public class RadioFragment extends Fragment {
+public class ClassificationFragment extends Fragment {
 
     private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_host, container, false);
+        view = inflater.inflate(R.layout.fragment_classification, container, false);
         return view;
     }
 

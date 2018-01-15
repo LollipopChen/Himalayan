@@ -1,4 +1,4 @@
-package com.example.mydemo.com.example.mydemo.activity;
+package com.example.mydemo.ui.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -10,7 +10,7 @@ import com.example.mydemo.R;
 
 public class WelcomeActivity extends AppCompatActivity {
     private Handler handler = new Handler();
-    private static final long TIME = 2000;
+    private static final long TIME = 2000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.example.mydemo.fragment;
+package com.example.mydemo.ui.fragment;
 
 
 import android.os.Bundle;
@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 import com.example.mydemo.R;
 
 
-public class HotFragment extends Fragment {
+public class ReadFragment extends Fragment {
 
     private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_hot, container, false);
+        view = inflater.inflate(R.layout.fragment_read, container, false);
         return view;
     }
 

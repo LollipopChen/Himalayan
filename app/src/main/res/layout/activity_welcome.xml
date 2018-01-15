@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mydemo.com.example.mydemo.activity.WelcomeActivity"
+    tools:context=".ui.activity.WelcomeActivity"
     android:background="@mipmap/welcome_bg">
 
     <!--<TextView-->

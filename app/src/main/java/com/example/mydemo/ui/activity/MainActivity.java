@@ -1,4 +1,4 @@
-package com.example.mydemo.com.example.mydemo.activity;
+package com.example.mydemo.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -18,13 +17,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mydemo.R;
-import com.example.mydemo.activity.fragment.FoundFragment;
-import com.example.mydemo.activity.fragment.HomeFragment;
-import com.example.mydemo.activity.fragment.MineFragment;
-import com.example.mydemo.activity.fragment.ReadFragment;
-import com.example.mydemo.util.InfoUtil;
+import com.example.mydemo.base.BaseActivity;
+import com.example.mydemo.ui.fragment.FoundFragment;
+import com.example.mydemo.ui.fragment.HomeFragment;
+import com.example.mydemo.ui.fragment.MineFragment;
+import com.example.mydemo.ui.fragment.ReadFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     /** 底部导航栏 **/
     private BottomNavigationView navigation;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /** 离线 **/
     private ImageButton imgBtn_off_line;
     /** 下载 **/
-    private ImageButton imgBtndownload;
+    private ImageButton imgBtnDownload;
     /** 搜索 **/
     private EditText ed_search;
     /** 标题 **/
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     replaceFragment(new HomeFragment());
                     acRellayout.setVisibility(View.VISIBLE);
                     actionBar_tv.setVisibility(View.GONE);
-                    imgBtndownload.setVisibility(View.VISIBLE);
+                    imgBtnDownload.setVisibility(View.VISIBLE);
                     imgBtn_scan.setVisibility(View.GONE);
                     imgBtn_off_line.setVisibility(View.VISIBLE);
                     return true;
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     actionBar_tv.setVisibility(View.VISIBLE);
                     acRellayout.setVisibility(View.GONE);
                     actionBar_tv.setText(R.string.title_read);
-                    imgBtndownload.setVisibility(View.VISIBLE);
+                    imgBtnDownload.setVisibility(View.VISIBLE);
                     imgBtn_scan.setVisibility(View.GONE);
                     imgBtn_off_line.setVisibility(View.VISIBLE);;
                     return true;
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     actionBar_tv.setVisibility(View.VISIBLE);
                     acRellayout.setVisibility(View.GONE);
                     actionBar_tv.setText(R.string.title_found);
-                    imgBtndownload.setVisibility(View.VISIBLE);
+                    imgBtnDownload.setVisibility(View.VISIBLE);
                     imgBtn_scan.setVisibility(View.GONE);
                     imgBtn_off_line.setVisibility(View.VISIBLE);
                     return true;
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     replaceFragment(new MineFragment());
                     actionBar_tv.setVisibility(View.INVISIBLE);
                     acRellayout.setVisibility(View.GONE);
-                    imgBtndownload.setVisibility(View.GONE);
+                    imgBtnDownload.setVisibility(View.GONE);
                     imgBtn_scan.setVisibility(View.VISIBLE);
                     imgBtn_off_line.setVisibility(View.INVISIBLE);
 
@@ -132,16 +131,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
        //自定义actionBar的布局
         actionBar = getSupportActionBar();
-        actionBar.show();//显示actionbar
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        actionBar.setCustomView(R.layout.actionbar_layout);
-        imgBtn_message = (ImageButton) actionBar.getCustomView().findViewById(R.id.message);
-        ed_search = (EditText) actionBar.getCustomView().findViewById(R.id.search_ed);
-        acRellayout = (RelativeLayout) actionBar.getCustomView().findViewById(R.id.search_layout);
-        imgBtn_off_line = (ImageButton) actionBar.getCustomView().findViewById(R.id.off_line);
-        imgBtndownload = (ImageButton) actionBar.getCustomView().findViewById(R.id.download);
-        actionBar_tv = (TextView) actionBar.getCustomView().findViewById(R.id.actionbar_tv);
-        imgBtn_scan = (ImageButton) actionBar.getCustomView().findViewById(R.id.scan);
+        actionBar.hide();//显示actionbar
+        imgBtn_message = (ImageButton) findViewById(R.id.message);
+        ed_search = (EditText) findViewById(R.id.search_ed);
+        acRellayout = (RelativeLayout) findViewById(R.id.search_layout);
+        imgBtn_off_line = (ImageButton) findViewById(R.id.off_line);
+        imgBtnDownload = (ImageButton) findViewById(R.id.download);
+        actionBar_tv = (TextView) findViewById(R.id.actionbar_tv);
+        imgBtn_scan = (ImageButton) findViewById(R.id.scan);
 
     }
 
@@ -150,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         imgBtn_message.setOnClickListener(this);
         imgBtn_off_line.setOnClickListener(this);
-        imgBtndownload.setOnClickListener(this);
+        imgBtnDownload.setOnClickListener(this);
         imgBtn_scan.setOnClickListener(this);
     }
 

@@ -1,4 +1,4 @@
-package com.example.mydemo.activity.fragment;
+package com.example.mydemo.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mydemo.R;
-import com.example.mydemo.fragment.*;
 
 import java.util.ArrayList;
 import java.util.List;
