@@ -129,7 +129,7 @@
             android:id="@+id/my_trafficpackage"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/mine_trafficpackage"
+            android:text="@string/mine_traffic_package"
             android:drawableLeft="@drawable/ic_trafficpackage"
             android:gravity="center_vertical"
             android:drawablePadding="@dimen/mine_tool_item_padding"/>
